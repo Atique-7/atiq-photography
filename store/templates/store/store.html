@@ -1,0 +1,48 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% load currency %}
+
+
+{% block csss %}
+    <!-- STATIC FILE CSS -->
+    <link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet">
+{% endblock csss %}
+
+      {% block body %}
+      <div class="container-fluid mx-auto">
+        <div class="row">
+
+          
+          <div class="col-lg-2">
+            <div class="list-group">
+              <a href="/store" class="list-group-item list-group-item-action " aria-current="true">
+                All Pieces
+              </a>
+              {% for category in Categories %}
+              <a href="store?id={{ category.id }}" class="list-group-item list-group-item-action " aria-current="true">
+                {{ category.sort }}
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="col-lg-10">
+            <div class="card-columns">
+              {% for data in DataList %}
+                <div class="card">
+                  <img src="{{ data.piece.url }}">
+                  <div class="image_overlay image_overlay--blur">
+                    <div class="image_title">
+                      <a href="store/{{ data.permalink }}">{{ data.name }}</a>
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+      {% endblock body %}
+

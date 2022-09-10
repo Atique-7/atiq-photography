@@ -1,0 +1,53 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="col-lg-5 mx-auto border rounded pt-3">
+            <div>
+                <h4 class="alert alert-light" >Jump Right In</h4>
+            </div>
+            {% for erro in form %}
+            {% if erro.errors %}
+            <div class="alert">
+                <h4>{{ erro.errors }}</h4>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <form action="/signup" method="POST">
+                {% csrf_token %}
+
+                <!-- first Name -->
+                <div class="form-group">
+                    <label for="">First Name</label>
+                    {{ form.first_name }}
+                </div>
+
+                <!-- Last Name -->
+                <div class="form-group">
+                    <label for="">Last Name</label>
+                    {{ form.last_name }}
+                </div>
+
+                <!-- email -->
+                <div class="form-group">
+                    <label for="">Email</label>
+                    {{ form.email }}
+                </div>
+
+                <!-- password -->
+                <div class="form-group">
+                    <label for="">Password</label>
+                    {{ form.password }}
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create an Account" class="btn btn-dark btn-sm">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

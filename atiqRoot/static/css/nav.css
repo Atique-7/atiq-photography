@@ -1,0 +1,66 @@
+/* Navbar */
+.navbar {
+    margin-bottom: 20px !important;
+    background-image: transparent !important;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.auth {
+    margin-top: 10px !important;
+}
+.auth .req {
+  margin-right: 8px;
+  text-decoration: none !important;
+  color:rgba(223, 217, 217, 0.466);
+  font-size: 1.1em;
+
+}
+
+.auth .login {
+  color: black;
+}
+
+.auth .login:hover { 
+  color: #7DF9FF;
+}
+
+.auth .signup {
+  background-image: linear-gradient(to left, rgb(255, 8, 0), rgb(119, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.auth .signup:hover { 
+  color: #7DF9FF;
+}
+
+.logout {
+  margin-top: 8px !important;
+  text-decoration: none !important;
+  color: black;
+  font-size: 1.1em;
+}
+
+.logout:hover { 
+  color: #7DF9FF;
+}
+
+/* user */
+.drop {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.nav-link:hover { 
+  color: #7DF9FF !important;
+}
+
+/*  */
+
+.cartfloat {
+  margin-top: 3px;
+  display: block;
+  float: left;
+}

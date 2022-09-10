@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+}
+body {
+  overflow: hidden;
+}
+#gradientBg {
+  height: 100vh;
+  background: linear-gradient(67.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(112.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(22.5deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(308deg, rgb(235, 73, 66) 0%, rgb(235, 73, 66) 14%,rgb(197, 76, 57) 14%, rgb(197, 76, 57) 36%,rgb(159, 78, 48) 36%, rgb(159, 78, 48) 42%,rgb(121, 81, 39) 42%, rgb(121, 81, 39) 45%,rgb(83, 84, 29) 45%, rgb(83, 84, 29) 79%,rgb(45, 86, 20) 79%, rgb(45, 86, 20) 83%,rgb(7, 89, 11) 83%, rgb(7, 89, 11) 100%),linear-gradient(308deg, rgb(169, 5, 29),rgb(51, 13, 59)); background-blend-mode:overlay,overlay,overlay,overlay,normal;
+}
+
+
+/* NAV BAR */
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  width: auto;
+  text-decoration: none;
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 5px;
+  transition: 0.5s;
+  color: grey;
+}
+
+.verticalNav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  
+}
+
+.name a{
+  z-index: 10;
+  text-decoration: none;
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 5px;
+  transition: 0.5s;
+  color: white;
+}
+
+
+.name a span{
+  transition: 0.5s;
+}
+
+.name a:hover span:nth-child(1){
+  margin-right: 10px;
+
+}
+
+.name a:hover span:nth-child(2){
+  margin-left: 30px;
+
+}
+
+.name a:hover span{
+  color: #ff00f2;
+  text-shadow:  0 0 10px #ff00f2,
+                0 0 20px #ff00f2,
+                0 0 40px #ff00f2;
+  
+}
+
+.store:hover {
+  color: rgb(255, 255, 255);
+  text-shadow:  0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff;
+  transform: scale(0.8);
+
+}
+
+.about:hover {
+  color: #FFFF33;
+  text-shadow:  0 0 10px #FFFF33,
+                0 0 20px #FFFF33,
+                0 0 40px #FFFF33;
+  
+                transform: scale(0.8);
+
+}
+
+/* Auth */
+.auth {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.auth .pad-style {
+  margin-right: 20px;
+  transition: 0.4s;
+}
+
+.auth a {
+  margin-right: 5px;
+  text-decoration: none;
+  color:rgba(223, 217, 217, 0.466);
+  font-size: 1.2em;
+  font-weight: 1000;
+}
+
+.auth .login {
+  background-image: linear-gradient(to left, maroon, #fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.auth .login:hover { 
+  color: #7DF9FF;
+}
+
+.auth .signup {
+  background-image: linear-gradient(to left, rgb(255, 8, 0), rgb(119, 0, 255));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.auth .signup:hover { 
+  color: #7DF9FF;
+}

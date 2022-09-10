@@ -1,0 +1,54 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% load cart %}
+{% load currency %}
+
+<!-- <h1> {{ ProductInfo.name }} </h1> -->
+
+{% block csss %}
+<!-- STATIC FILE CSS -->
+<link href="{% static 'css/product_detail.css' %}" type="text/css" rel="stylesheet">
+{% endblock csss %}
+
+{% block body %}
+
+<div class='container-fluid'>
+  <div class="card"> <img class='mx-auto img-thumbnail' src="{{ ProductInfo.piece.url }}" width="500px" height="auto" />
+    <div class="card-body text-center mx-auto">
+      <div class='mx-auto'>
+        <figure class="text-end">
+          <blockquote class="lead">
+            <p class="text-start">{{ ProductInfo.description }}</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">Atique</figcaption>
+        </figure>
+          <p class="card-text font-weight-bold detail-price">{{ ProductInfo.price|currency }}</p>
+        
+        <div class="btn-group " role="group" aria-label="Basic example">
+          {% if ProductInfo|is_in_cart:request.session.cart %}
+          <div>
+            <form action="" method="post">
+              {% csrf_token %}
+              <input hidden type="text" name="product" value="{{ ProductInfo.id }}">
+              <input hidden type="text" name="remove" value="True">
+              <input type='submit' class="btn btn-outline-warning" value="Remove From Cart">
+            </form>
+            <a href='/store' class="btn btn-outline-primary mt-2 "> GO BACK </a>
+          </div>
+          {% else %}
+          <div>
+            <form action="" method="post">
+              {% csrf_token %}
+              <input hidden type="text" name="product" value="{{ ProductInfo.id }}">
+              <input type='submit' class="btn btn-outline-success" value="Add to cart">
+            </form>
+            <a href='/store' class="btn btn-outline-danger mt-2 "> GO BACK </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
